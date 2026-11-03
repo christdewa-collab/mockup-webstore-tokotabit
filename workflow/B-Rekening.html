@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Update rekening</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#222a36}
+.win{background:#fff;border:1px solid #e7eaef;border-radius:14px;box-shadow:0 1px 3px rgba(20,41,74,.08);overflow:hidden;display:flex;flex-direction:column}
+.bar{background:#f1f3f6;border-bottom:1px solid #e7eaef;padding:9px 14px;font-size:12px;color:#556275;font-family:'JetBrains Mono',monospace}
+.body{padding:22px;display:flex;flex-direction:column;gap:14px}
+.lbl{font-size:12px;font-weight:600;color:#556275;display:block;margin-bottom:2px}
+.v{font-size:14px;font-weight:600;color:#14294a}
+.in{width:100%;box-sizing:border-box;border:1px solid #cfd6e0;border-radius:8px;padding:10px 12px;font:inherit;font-size:14px;background:#fff}
+.btn{border:0;border-radius:8px;background:#1c64c4;color:#fff;font:inherit;font-size:14px;font-weight:700;padding:11px 18px}
+.btn2{border:1px solid #cfd6e0;border-radius:8px;background:#fff;color:#14294a;font:inherit;font-size:13px;font-weight:600;padding:8px 14px}
+.btn[disabled],.btn2[disabled]{background:#f1f3f6;color:#697586;cursor:not-allowed;border-color:#e7eaef}
+.pin{width:20px;height:20px;border-radius:999px;background:#c77a06;color:#fff;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle;margin-right:6px}
+.mono{font-family:'JetBrains Mono',monospace}
+.pill{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.ok{background:#e7f4ec;color:#146c3b}.wait{background:#fbf1dd;color:#8a5200}.info{background:#e8f0fb;color:#154e9c}
+.tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px}
+.perbaiki{background:#fbf1dd;color:#8a5200}.baru{background:#e8f0fb;color:#154e9c}.ada{background:#e7f4ec;color:#146c3b}
+.leg{display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:1.45;color:#33445f}
+.acc{border:1px solid #e7eaef;border-radius:12px;padding:14px;display:flex;gap:14px;align-items:center}
+.ln{height:8px;border-radius:4px;background:#e1e6ee;margin-bottom:9px}
+</style>
+<style>body{background:#e9ecf1;padding:24px;overflow:auto}body>div{margin:0 auto}</style>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div id="tb"><a href="../index.html">☰ Indeks</a><span>Alur 3 · Update rekening</span><span><a href="../workflow/Main.html">‹ Sebelumnya</a><a href="../workflow/C-Order.html">Berikutnya ›</a></span></div><div id="toast" role="status"></div>
+
+
+<div style="width:1560px;height:860px;box-sizing:border-box;background:#f5f6f8;padding:32px 40px;display:flex;flex-direction:column;gap:20px">
+  <div>
+    <div style="font-size:12px;font-weight:700;color:#1c64c4;letter-spacing:.06em">ALUR 3 · SELLER UPDATE REKENING</div>
+    <h1 style="margin:4px 0 0;font-size:28px;font-weight:800;color:#14294a">Review rekening (admin) &amp; kelola rekening (seller)</h1>
+    <p style="margin:6px 0 0;font-size:14px;color:#556275">Menutup temuan QA: admin belum bisa melihat bukti rekening, kolom “Nama beda” keliru, dan rekening Utama bisa dihapus.</p>
+  </div>
+
+  <div style="display:flex;gap:28px;flex-grow:1;min-height:0">
+    <div style="flex:1 1 0;display:flex;flex-direction:column;gap:14px;min-width:0">
+      <div class="win">
+        <div class="bar">admin.tehniq.id/webmaster · Keuangan › Rekening penjual › Teknik Jaya</div>
+        <div class="body">
+          <div style="display:flex;gap:8px"><span class="pill wait">Menunggu · 3</span><span class="pill" style="background:#f1f3f6;color:#33445f">Terverifikasi · 12</span><span class="pill" style="background:#f1f3f6;color:#33445f">Ditolak · 1</span></div>
+          <div style="display:flex;gap:18px">
+            <div style="width:230px;flex-shrink:0;display:flex;flex-direction:column;gap:11px">
+              <div><span class="lbl">Bank</span><div class="v">BCA</div></div>
+              <div><span class="lbl">Nomor rekening</span><div class="v mono">1234567890</div></div>
+              <div><span class="lbl">Nama pemilik rekening</span><div class="v">Rizal Pratama</div></div>
+              <div><span class="lbl">Nama legal usaha</span><div class="v">CV Teknik Jaya Abadi</div></div>
+              <div style="background:#fbf1dd;border-radius:8px;padding:9px 11px;font-size:13px;color:#8a5200;font-weight:600"><span class="pin">2</span>Nama beda: Ya</div>
+            </div>
+            <div style="flex-grow:1;min-width:0;background:#e8ebf0;border-radius:10px;padding:14px">
+              <div style="display:flex;justify-content:space-between;font-size:12px;color:#33445f;margin-bottom:8px"><span><span class="pin">1</span>Bukti rekening · buku-tabungan.jpg</span><a href="#" style="color:#154e9c;font-weight:700;text-decoration:none">Buka ↗</a></div>
+              <div style="background:#fff;border-radius:6px;padding:18px;height:200px;box-sizing:border-box">
+                <div class="ln" style="width:50%"></div><div class="ln" style="width:75%"></div><div class="ln" style="width:40%"></div><div class="ln" style="width:85%"></div><div class="ln" style="width:60%"></div>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-end;border-top:1px solid #e7eaef;padding-top:14px">
+            <div style="flex-grow:1"><label class="lbl" for="rr" style="color:#14294a;font-size:13px">Alasan (wajib bila ditolak)</label><input id="rr" class="in" placeholder="Contoh: nama pemilik tidak sesuai dengan nama legal"></div>
+            <button class="btn2" type="button" style="border-color:#d6453f;color:#b3322d">Tolak</button>
+            <button class="btn" type="button" style="background:#18874a">Verifikasi</button>
+          </div>
+        </div>
+      </div>
+      <div class="leg">
+        <div><span class="pin">1</span><b>Aksi “Lihat bukti”</b>: preview gambar/PDF langsung di halaman, tanpa unduh. <span class="tag baru">Baru</span></div>
+        <div><span class="pin">2</span><b>“Nama beda”</b> diisi dari pencocokan nama pemilik dengan nama legal (Ya/Tidak), bukan ikon centang untuk nilai “No”. Email keamanan terkirim ke pemilik. <span class="tag perbaiki">Perbaiki</span></div>
+        <div>Tab menampilkan jumlah per status agar antrean terlihat. <span class="tag ada">Sudah ada</span></div>
+      </div>
+    </div>
+
+    <div style="flex:1 1 0;display:flex;flex-direction:column;gap:14px;min-width:0">
+      <div class="win">
+        <div class="bar">seller.tehniq.id/dashboard/finance/accounts</div>
+        <div class="body">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:18px;font-weight:800;color:#14294a">Rekening penarikan</span><button class="btn" type="button">Tambah rekening</button></div>
+          <div class="acc">
+            <div style="flex-grow:1"><div class="v">BCA · 123•••890</div><div style="font-size:12px;color:#556275">CV Teknik Jaya Abadi</div></div>
+            <span class="pill info">Utama</span><span class="pill ok">Terverifikasi</span>
+            <button class="btn2" type="button" disabled aria-label="Hapus rekening Utama tidak tersedia">Hapus</button>
+          </div>
+          <div style="margin-top:-6px;font-size:12px;color:#8a5200;font-weight:600"><span class="pin">3</span>Tidak bisa dihapus: ini satu-satunya rekening terverifikasi. Tambah dan verifikasi rekening lain dulu.</div>
+          <div class="acc">
+            <div style="flex-grow:1"><div class="v">Mandiri · 009•••412</div><div style="font-size:12px;color:#556275">Rizal Pratama</div></div>
+            <span class="pill wait">Menunggu verifikasi</span>
+            <button class="btn2" type="button">Hapus</button>
+          </div>
+          <div style="font-size:12px;color:#556275">2 dari 3 rekening. Rekening baru belum bisa dipakai menarik saldo sampai diverifikasi admin (maks. 1×24 jam kerja).</div>
+        </div>
+      </div>
+      <div class="win">
+        <div class="bar">Tambah rekening</div>
+        <div class="body" style="gap:12px">
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+            <div><label class="lbl" for="b1" style="color:#14294a;font-size:13px">Bank</label><input id="b1" class="in" value="BNI"></div>
+            <div><label class="lbl" for="b2" style="color:#14294a;font-size:13px">Nomor rekening</label><input id="b2" class="in mono" value="0987654321"></div>
+          </div>
+          <div><label class="lbl" for="b3" style="color:#14294a;font-size:13px">Nama pemilik rekening</label><input id="b3" class="in" value="Rizal Pratama"></div>
+          <div style="border:1.5px dashed #cfd6e0;border-radius:10px;padding:14px;font-size:13px;color:#556275">Bukti: foto halaman depan buku tabungan atau screenshot m-banking · JPG/PNG/PDF, maks. 4 MB</div>
+        </div>
+      </div>
+      <div class="leg">
+        <div><span class="pin">3</span><b>Hapus rekening Utama</b> hanya aktif bila ada rekening terverifikasi lain dan tidak ada penarikan berjalan. <span class="tag baru">Baru</span></div>
+        <div>Setiap tambah, ubah, hapus tercatat di audit log. <span class="tag baru">Baru</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../mock.js"></script></body>
+</html>

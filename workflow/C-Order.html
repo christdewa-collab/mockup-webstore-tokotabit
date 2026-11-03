@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Order online</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#222a36}
+.win{background:#fff;border:1px solid #e7eaef;border-radius:14px;box-shadow:0 1px 3px rgba(20,41,74,.08);overflow:hidden;display:flex;flex-direction:column}
+.bar{background:#f1f3f6;border-bottom:1px solid #e7eaef;padding:9px 14px;font-size:12px;color:#556275;font-family:'JetBrains Mono',monospace}
+.body{padding:20px;display:flex;flex-direction:column;gap:12px}
+.h{font-size:14px;font-weight:800;color:#14294a}
+.sub{font-size:12px;color:#556275}
+.btn{border:0;border-radius:8px;background:#1c64c4;color:#fff;font:inherit;font-size:14px;font-weight:700;padding:11px 18px}
+.btn2{border:1px solid #cfd6e0;border-radius:8px;background:#fff;color:#14294a;font:inherit;font-size:13px;font-weight:600;padding:9px 14px}
+.pin{width:20px;height:20px;border-radius:999px;background:#c77a06;color:#fff;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle;margin-right:6px}
+.mono{font-family:'JetBrains Mono',monospace}
+.pill{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.ok{background:#e7f4ec;color:#146c3b}.wait{background:#fbf1dd;color:#8a5200}.info{background:#e8f0fb;color:#154e9c}
+.tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px}
+.perbaiki{background:#fbf1dd;color:#8a5200}.baru{background:#e8f0fb;color:#154e9c}.ada{background:#e7f4ec;color:#146c3b}
+.leg{display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:1.45;color:#33445f}
+.opt{border:1px solid #e7eaef;border-radius:10px;padding:11px 13px;display:flex;gap:12px;align-items:center;font-size:13px}
+.opt.sel{border-color:#1c64c4;background:#f2f6fc}
+.opt.off{background:#f5f6f8;color:#697586}
+.rad{width:16px;height:16px;border-radius:999px;border:2px solid #cfd6e0;flex-shrink:0}
+.sel .rad{border-color:#1c64c4;background:radial-gradient(#1c64c4 45%,#fff 50%)}
+.row{display:flex;justify-content:space-between;font-size:13px}
+.step{display:flex;gap:8px;align-items:center;font-size:12px;font-weight:600;color:#556275}
+.dot{width:12px;height:12px;border-radius:999px;background:#cfd6e0}.dn{background:#18874a}.cur{background:#1c64c4}
+</style>
+<style>body{background:#e9ecf1;padding:24px;overflow:auto}body>div{margin:0 auto}</style>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div id="tb"><a href="../index.html">☰ Indeks</a><span>Alur 4 · Order online</span><span><a href="../workflow/B-Rekening.html">‹ Sebelumnya</a><a href="../workflow/D-Pickup.html">Berikutnya ›</a></span></div><div id="toast" role="status"></div>
+
+
+<div style="width:1560px;height:960px;box-sizing:border-box;background:#f5f6f8;padding:32px 40px;display:flex;flex-direction:column;gap:20px">
+  <div>
+    <div style="font-size:12px;font-weight:700;color:#1c64c4;letter-spacing:.06em">ALUR 4 · ORDERAN ONLINE (KIRIM KURIR)</div>
+    <h1 style="margin:4px 0 0;font-size:28px;font-weight:800;color:#14294a">Checkout pembeli &amp; detail order seller</h1>
+    <p style="margin:6px 0 0;font-size:14px;color:#556275">Menutup temuan QA: ongkir flat, kurir instan lintas kota, alamat utama manual, tanpa batas bayar, tombol simulasi bayar, serta aksi Terima/Tolak, Tandai sampai, dan resi yang belum ada.</p>
+  </div>
+
+  <div style="display:flex;gap:28px;flex-grow:1;min-height:0">
+    <div style="flex:1 1 0;display:flex;flex-direction:column;gap:14px;min-width:0">
+      <div class="win">
+        <div class="bar">teknikjaya.tehniq.id/checkout</div>
+        <div class="body">
+          <div><div class="h">Alamat pengiriman</div></div>
+          <div class="opt sel"><span class="rad"></span><div style="flex-grow:1"><b>Rizal Pratama</b> · 0812 3456 7890<br><span class="sub">Jl. Dukuh Kupang 8, Dukuh Pakis, Surabaya 60225</span></div><span class="pill info"><span class="pin" style="width:16px;height:16px;font-size:10px;margin-right:4px">1</span>Utama</span></div>
+          <div class="h" style="margin-top:4px">Pengiriman <span class="sub" style="font-weight:500">· asal Surabaya (Rungkut) → Surabaya (Dukuh Pakis)</span></div>
+          <div class="opt sel"><span class="rad"></span><div style="flex-grow:1"><b>GoSend Instan</b> <span class="sub">· hari ini</span></div><span class="mono">Rp 18.000</span></div>
+          <div class="opt"><span class="rad"></span><div style="flex-grow:1"><b>JNE Reguler</b> <span class="sub">· 2–3 hari</span></div><span class="mono">Rp 11.000</span></div>
+          <div class="opt"><span class="rad"></span><div style="flex-grow:1"><b>SiCepat BEST</b> <span class="sub">· 1–2 hari</span></div><span class="mono">Rp 13.000</span></div>
+          <div class="opt off"><span class="rad"></span><div style="flex-grow:1">GoSend Instan hanya tersedia bila alamat tujuan satu kota dengan toko.</div></div>
+          <div style="border-top:1px solid #e7eaef;padding-top:12px;display:flex;flex-direction:column;gap:6px">
+            <div class="row"><span>Subtotal</span><span class="mono">Rp 285.000</span></div>
+            <div class="row"><span>Ongkir (dari kurir)</span><span class="mono">Rp 18.000</span></div>
+            <div class="row"><span>Biaya layanan</span><span class="mono">Rp 1.000</span></div>
+            <div class="row" style="font-size:15px;font-weight:800"><span>Total</span><span class="mono">Rp 304.000</span></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span class="sub">Masuk dengan OTP WA atau <a href="#" style="color:#1c64c4;font-weight:700;text-decoration:none">lanjut sebagai tamu</a></span><button class="btn" type="button">Buat pesanan</button></div>
+        </div>
+      </div>
+      <div class="win">
+        <div class="bar">teknikjaya.tehniq.id/order/1042/pay</div>
+        <div class="body" style="flex-direction:row;align-items:center;gap:16px">
+          <div style="flex-grow:1"><div class="h">Selesaikan pembayaran</div><div class="sub">QRIS · VA BCA · e-wallet via Midtrans</div></div>
+          <div style="text-align:right"><div class="sub">Bayar sebelum</div><div class="mono" style="font-weight:700;color:#a4302b"><span class="pin">3</span>04 Nov 2026, 14:20 · sisa 23:41:10</div></div>
+        </div>
+      </div>
+      <div class="leg">
+        <div><span class="pin">1</span>Alamat utama terpilih otomatis; checkout tamu dengan nama + WA. <span class="tag perbaiki">Perbaiki</span></div>
+        <div><span class="pin">2</span>Ongkir dan daftar kurir dari API berdasarkan kecamatan &amp; berat; instan hanya satu kota. <span class="tag perbaiki">Perbaiki</span></div>
+        <div><span class="pin">3</span>Batas bayar 24 jam, lewat batas order batal otomatis dan stok kembali. Tidak ada tombol “Simulate payment” (key production). <span class="tag perbaiki">Perbaiki</span></div>
+      </div>
+    </div>
+
+    <div style="flex:1 1 0;display:flex;flex-direction:column;gap:14px;min-width:0">
+      <div class="win">
+        <div class="bar">seller.tehniq.id/dashboard/orders/1042</div>
+        <div class="body">
+          <div style="display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:18px;font-weight:800;color:#14294a">Order #1042</div><div class="sub">3 Nov 2026 · Rizal Pratama · GoSend Instan</div></div><span class="pill wait">Dibayar</span></div>
+          <div style="display:flex;gap:16px;padding:6px 0"><span class="step"><span class="dot dn"></span>Dibayar</span><span class="step"><span class="dot cur"></span>Diproses</span><span class="step"><span class="dot"></span>Dikirim</span><span class="step"><span class="dot"></span>Sampai</span><span class="step"><span class="dot"></span>Selesai</span></div>
+          <div style="background:#fbf1dd;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:12px">
+            <div style="flex-grow:1;font-size:13px;color:#8a5200"><span class="pin">4</span><b>Terima pesanan sebelum 5 Nov 2026.</b> Lewat batas, order batal dan dana dikembalikan ke pembeli.</div>
+            <button class="btn2" type="button" style="border-color:#d6453f;color:#b3322d">Tolak</button>
+            <button class="btn" type="button" style="padding:9px 16px">Terima</button>
+          </div>
+          <div style="border:1px solid #e7eaef;border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;font-size:13px"><span><b>Pengiriman</b><br><span class="sub">AWB belum dibuat</span></span><span style="display:flex;gap:8px;align-items:center"><button class="btn2" type="button">Generate AWB</button><button class="btn2" type="button">Cetak label</button></span></div>
+        </div>
+      </div>
+      <div class="win">
+        <div class="bar">seller.tehniq.id/dashboard/orders · Dikirim</div>
+        <div class="body" style="gap:10px">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:13px"><span class="pin">5</span><b>3 order dipilih</b></span><span style="display:flex;gap:8px"><button class="btn2" type="button">Generate AWB massal</button><button class="btn2" type="button">Cetak label massal</button></span></div>
+          <div class="opt"><div style="flex-grow:1"><b>#1040</b> · Dikirim<br><span class="sub">Resi <a href="#" class="mono" style="color:#1c64c4;font-weight:700;text-decoration:none">GK-88213344 ↗</a> <span style="color:#556275">(buka halaman lacak)</span></span></div><button class="btn2" type="button"><span class="pin" style="width:16px;height:16px;font-size:10px;margin-right:4px">6</span>Tandai sudah sampai</button></div>
+        </div>
+      </div>
+      <div class="leg">
+        <div><span class="pin">4</span><b>Terima / Tolak</b> di detail order; Tolak wajib alasan, lalu refund otomatis. Batas proses diusulkan 2 hari kerja. <span class="tag baru">Baru</span></div>
+        <div><span class="pin">5</span>Generate AWB dan cetak label bisa massal. <span class="tag perbaiki">Perbaiki</span></div>
+        <div><span class="pin">6</span>Nomor resi bisa diklik untuk lacak; tombol “Tandai sudah sampai” sebagai cadangan webhook kurir. <span class="tag perbaiki">Perbaiki</span></div>
+        <div>Notifikasi WA/email order baru ke seller juga dikirim saat status Dibayar. <span class="tag perbaiki">Perbaiki</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../mock.js"></script></body>
+</html>

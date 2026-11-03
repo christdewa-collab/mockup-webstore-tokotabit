@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Withdrawal</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#222a36}
+.win{background:#fff;border:1px solid #e7eaef;border-radius:14px;box-shadow:0 1px 3px rgba(20,41,74,.08);overflow:hidden;display:flex;flex-direction:column}
+.bar{background:#f1f3f6;border-bottom:1px solid #e7eaef;padding:9px 14px;font-size:12px;color:#556275;font-family:'JetBrains Mono',monospace}
+.body{padding:22px;display:flex;flex-direction:column;gap:14px}
+.lbl{font-size:13px;font-weight:600;color:#14294a;display:block;margin-bottom:6px}
+.in{width:100%;box-sizing:border-box;border:1px solid #cfd6e0;border-radius:8px;padding:10px 12px;font:inherit;font-size:14px;background:#fff;color:#222a36}
+.in.err{border-color:#d6453f}
+.errt{font-size:12px;color:#a4302b;margin-top:6px;font-weight:600}
+.hint{font-size:12px;color:#556275;margin-top:6px}
+.btn{border:0;border-radius:8px;background:#1c64c4;color:#fff;font:inherit;font-size:14px;font-weight:700;padding:12px 20px}
+.btn[disabled]{background:#c9d3e2;color:#556275}
+.pin{width:20px;height:20px;border-radius:999px;background:#c77a06;color:#fff;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle;margin-right:6px}
+.mono{font-family:'JetBrains Mono',monospace}
+.pill{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.ok{background:#e7f4ec;color:#146c3b}.wait{background:#fbf1dd;color:#8a5200}.info{background:#e8f0fb;color:#154e9c}
+.tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px}
+.perbaiki{background:#fbf1dd;color:#8a5200}.baru{background:#e8f0fb;color:#154e9c}.ada{background:#e7f4ec;color:#146c3b}
+.leg{display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:1.45;color:#33445f}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{text-align:left;font-size:12px;color:#556275;padding:8px 10px;border-bottom:1px solid #e7eaef}
+td{padding:11px 10px;border-bottom:1px solid #f1f3f6}
+.r{text-align:right}
+</style>
+<style>body{background:#e9ecf1;padding:24px;overflow:auto}body>div{margin:0 auto}</style>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div id="tb"><a href="../index.html">☰ Indeks</a><span>Alur 2 · Withdrawal</span><span><a href="../onboarding/S8-Status.html">‹ Sebelumnya</a><a href="../workflow/B-Rekening.html">Berikutnya ›</a></span></div><div id="toast" role="status"></div>
+
+
+<div style="width:1560px;height:860px;box-sizing:border-box;background:#f5f6f8;padding:32px 40px;display:flex;flex-direction:column;gap:20px">
+  <div>
+    <div style="font-size:12px;font-weight:700;color:#1c64c4;letter-spacing:.06em">ALUR 2 · SELLER REQUEST WITHDRAWAL</div>
+    <h1 style="margin:4px 0 0;font-size:28px;font-weight:800;color:#14294a">Tarik saldo &amp; Mutasi saldo</h1>
+    <p style="margin:6px 0 0;font-size:14px;color:#556275">Menutup temuan QA: validasi jumlah belum ada, dan Mutasi Saldo belum menampilkan tipe Penarikan. Angka hanya contoh.</p>
+  </div>
+
+  <div style="display:flex;gap:28px;flex-grow:1;min-height:0">
+    <div style="width:640px;flex-shrink:0;display:flex;flex-direction:column;gap:14px">
+      <div class="win">
+        <div class="bar">seller.tehniq.id/dashboard/finance · Tarik saldo</div>
+        <div class="body">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:18px;font-weight:800;color:#14294a">Tarik saldo</span><span style="font-size:13px;color:#556275">Saldo tersedia <b class="mono" style="color:#14294a">Rp 1.250.000</b></span></div>
+          <div>
+            <label class="lbl" for="j">Jumlah penarikan</label>
+            <div style="display:flex;gap:8px"><input id="j" class="in err mono" value="Rp 10.000"><button class="btn" type="button" style="background:#fff;color:#154e9c;border:1px solid #cfd6e0;white-space:nowrap">Tarik semua</button></div>
+            <div class="errt"><span class="pin">1</span>Minimal penarikan Rp 50.000</div>
+          </div>
+          <div>
+            <label class="lbl" for="k">Rekening tujuan</label>
+            <select id="k" class="in"><option>BCA · 123•••890 · CV Teknik Jaya Abadi (Utama · Terverifikasi)</option></select>
+          </div>
+          <div style="background:#f5f6f8;border-radius:10px;padding:12px 14px;font-size:13px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;justify-content:space-between"><span>Jumlah penarikan</span><span class="mono">Rp 10.000</span></div>
+            <div style="display:flex;justify-content:space-between"><span>Biaya penarikan</span><b style="color:#146c3b">Gratis</b></div>
+            <div style="display:flex;justify-content:space-between;border-top:1px solid #e7eaef;padding-top:8px"><b>Diterima di rekening</b><b class="mono">Rp 10.000</b></div>
+          </div>
+          <div><label class="lbl" for="p">Konfirmasi kata sandi</label><input id="p" class="in" type="password" value="password"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><span style="font-size:12px;color:#556275">Diproses maksimal 1×24 jam kerja</span><button class="btn" type="button" disabled><span style="margin-right:0">Ajukan penarikan</span></button></div>
+        </div>
+      </div>
+      <div class="leg">
+        <div><span class="pin">1</span><b>Validasi langsung di bawah kolom.</b> Minimal Rp50.000, maksimal saldo tersedia. Tombol Ajukan nonaktif selama tidak valid. <span class="tag perbaiki">Perbaiki</span></div>
+        <div><span class="pin">2</span>Rincian “Diterima di rekening” dan biaya Gratis tampil sebelum konfirmasi. <span class="tag ada">Sudah ada</span></div>
+      </div>
+    </div>
+
+    <div style="flex-grow:1;display:flex;flex-direction:column;gap:14px;min-width:0">
+      <div class="win">
+        <div class="bar">seller.tehniq.id/dashboard/finance · Mutasi saldo</div>
+        <div class="body" style="gap:10px">
+          <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="pill info">Semua</span><span class="pill" style="background:#f1f3f6;color:#33445f">Penjualan</span><span class="pill" style="background:#f1f3f6;color:#33445f">Penarikan</span><span class="pill" style="background:#f1f3f6;color:#33445f">Refund</span></div>
+          <table>
+            <thead><tr><th>Waktu</th><th>Tipe</th><th>Keterangan</th><th class="r">Jumlah</th><th class="r">Saldo</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">03 Nov 14:20</td><td><span class="pill wait"><span class="pin" style="width:16px;height:16px;font-size:10px;margin-right:4px">3</span>Penarikan</span></td><td>WD-000123 · BCA 123•••890<br><span style="font-size:12px;color:#556275">Ref. transfer <span class="mono">TRX8841</span> · Dibayar</span></td><td class="r mono" style="color:#a4302b">− Rp 500.000</td><td class="r mono">Rp 750.000</td></tr>
+              <tr><td class="mono">02 Nov 09:05</td><td><span class="pill ok">Penjualan</span></td><td>Order #1042 selesai<br><span style="font-size:12px;color:#556275">Subtotal − fee platform 5%</span></td><td class="r mono" style="color:#146c3b">+ Rp 285.000</td><td class="r mono">Rp 1.250.000</td></tr>
+              <tr><td class="mono">01 Nov 17:40</td><td><span class="pill ok">Penjualan</span></td><td>Order #1038 selesai</td><td class="r mono" style="color:#146c3b">+ Rp 190.000</td><td class="r mono">Rp 965.000</td></tr>
+            </tbody>
+          </table>
+          <div style="display:flex;justify-content:flex-end"><a href="#" style="font-size:13px;font-weight:600;color:#1c64c4;text-decoration:none">Unduh CSV</a></div>
+        </div>
+      </div>
+      <div class="win">
+        <div class="bar">seller.tehniq.id · Status penarikan berjalan</div>
+        <div class="body" style="flex-direction:row;align-items:center;gap:14px">
+          <span class="pill wait">Diajukan</span>
+          <div style="flex-grow:1;font-size:13px"><b>WD-000124</b> · Rp 300.000 ke BCA 123•••890<br><span style="color:#556275">Dana ditahan di “Dalam proses penarikan”. Satu penarikan berjalan per toko.</span></div>
+        </div>
+      </div>
+      <div class="leg">
+        <div><span class="pin">3</span><b>Baris tipe Penarikan</b> dengan nomor WD, rekening, status, dan ref. transfer. Filter tipe ditambah. <span class="tag perbaiki">Perbaiki</span></div>
+        <div><span class="pin">4</span>Saat ada penarikan berjalan, tombol Tarik saldo diganti kartu status ini. <span class="tag ada">Sudah ada</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../mock.js"></script></body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Lengkapi profil toko</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#222a36}
+.card{background:#fff;border:1px solid #e7eaef;border-radius:12px;box-shadow:0 1px 2px rgba(20,41,74,.06)}
+.lbl{font-size:13px;font-weight:600;color:#14294a;display:block;margin-bottom:6px}
+.in{width:100%;box-sizing:border-box;border:1px solid #cfd6e0;border-radius:8px;padding:10px 12px;font:inherit;font-size:14px;background:#fff;color:#222a36}
+.in[readonly]{background:#f1f3f6;color:#556275}
+.btn{border:0;border-radius:8px;background:#1c64c4;color:#fff;font:inherit;font-size:14px;font-weight:700;padding:11px 20px;cursor:pointer}
+.btn2{border:1px solid #cfd6e0;border-radius:8px;background:#fff;color:#14294a;font:inherit;font-size:14px;font-weight:600;padding:11px 20px}
+.hint{font-size:12px;color:#556275;margin-top:6px}
+.n{width:22px;height:22px;border-radius:999px;background:#c77a06;color:#fff;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.note{display:flex;gap:10px;font-size:13px;line-height:1.5;color:#33445f}
+.mono{font-family:'JetBrains Mono',monospace;font-size:12px;background:#f1f3f6;padding:1px 5px;border-radius:4px}
+.st{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#556275}
+.dot{width:26px;height:26px;border-radius:999px;border:1.5px solid #cfd6e0;display:flex;align-items:center;justify-content:center;font-size:12px;font-family:'JetBrains Mono',monospace;background:#fff}
+.on .dot{background:#1c64c4;border-color:#1c64c4;color:#fff}.on{color:#14294a}
+.done .dot{background:#18874a;border-color:#18874a;color:#fff}
+.bar{height:1.5px;background:#cfd6e0;width:28px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.prop{font-size:11px;font-weight:700;color:#8a5200;background:#fbf1dd;padding:2px 6px;border-radius:4px;margin-left:6px}
+</style>
+<style>body{background:#e9ecf1;padding:24px;overflow:auto}body>div{margin:0 auto}</style>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div id="tb"><a href="../index.html">☰ Indeks</a><span>2 · Lengkapi profil toko</span><span><a href="../onboarding/S1-Undangan.html">‹ Sebelumnya</a><a href="../onboarding/S3-Usaha.html">Berikutnya ›</a></span></div><div id="toast" role="status"></div>
+
+
+<div style="width:1040px;height:740px;box-sizing:border-box;background:#f5f6f8;padding:28px;display:flex;gap:24px">
+  <div style="flex-grow:1;display:flex;flex-direction:column;gap:18px;min-width:0">
+    <div>
+      <div style="font-size:12px;font-weight:700;color:#1c64c4;letter-spacing:.06em">LANGKAH 2 · PEMILIK TOKO</div>
+      <h2 style="margin:4px 0 0;font-size:22px;font-weight:800;color:#14294a">Lengkapi profil toko</h2>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+      <span class="st done"><span class="dot">✓</span>Akun</span><span class="bar"></span>
+      <span class="st on"><span class="dot">2</span>Profil toko</span><span class="bar"></span>
+      <span class="st"><span class="dot">3</span>Info usaha</span><span class="bar"></span>
+      <span class="st"><span class="dot">4</span>Verifikasi</span><span class="bar"></span>
+      <span class="st"><span class="dot">5</span>Go-live</span>
+    </div>
+    <div class="card" style="padding:22px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;gap:16px;align-items:center">
+        <div style="width:72px;height:72px;border-radius:14px;background:#e8f0fb;color:#154e9c;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800">TJ</div>
+        <div><button class="btn2" type="button">Unggah logo</button><div class="hint">JPG/PNG, maks 2 MB, rasio 1:1.</div></div>
+      </div>
+      <div class="g2">
+        <div><label class="lbl" for="a">Nama toko</label><input id="a" class="in" readonly value="Teknik Jaya"><div class="hint">Dibuat oleh admin; hubungi Tabyte untuk mengubah.</div></div>
+        <div><label class="lbl" for="b">Alamat toko</label><input id="b" class="in" readonly value="teknikjaya.tehniq.id"><div class="hint">Berasal dari slug toko.</div></div>
+      </div>
+      <div><label class="lbl" for="c">Deskripsi toko</label><textarea id="c" class="in" rows="3">Perkakas dan suku cadang teknik, dikirim dari Surabaya.</textarea></div>
+      <div class="g2">
+        <div><label class="lbl" for="d">Nomor WhatsApp toko<span class="prop">usulan</span></label><input id="d" class="in" value="0812 3456 7890"></div>
+        <div><label class="lbl" for="e">Email toko<span class="prop">usulan</span></label><input id="e" class="in" value="halo@teknikjaya.example"></div>
+      </div>
+      <div style="border-top:1px solid #e7eaef;padding-top:14px">
+        <div style="font-size:14px;font-weight:700;color:#14294a;margin-bottom:10px">Alamat asal pengiriman (gudang)<span class="prop">usulan</span></div>
+        <div class="g2">
+          <div><label class="lbl" for="f">Provinsi / Kota / Kecamatan</label><input id="f" class="in" value="Jawa Timur · Surabaya · Rungkut"></div>
+          <div><label class="lbl" for="g">Kode pos</label><input id="g" class="in" value="60293"><div class="hint">Dipakai sebagai asal ongkir Biteship.</div></div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:12px;color:#556275">Tersimpan otomatis sebagai draf</span>
+        <button class="btn" type="button">Simpan &amp; lanjut ke info usaha</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="width:270px;flex-shrink:0;display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid #e7eaef;border-radius:12px;padding:18px;align-self:stretch;box-sizing:border-box">
+    <div style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#14294a">CATATAN DEVELOPER</div>
+    <div class="note"><span class="n">1</span><span>Stepper tampil di Seller Center sampai toko aktif; langkah selesai ditandai ✓ dan bisa dibuka lagi.</span></div>
+    <div class="note"><span class="n">2</span><span>Nama dan slug dibuat admin saat onboarding (<span class="mono">StoreOnboarding</span>), jadi read-only bagi penjual.</span></div>
+    <div class="note"><span class="n">3</span><span>Kolom bertanda <span class="prop" style="margin:0">usulan</span> belum ada di skema; perlu kolom baru di <span class="mono">stores</span> atau tabel profil. Mohon dikonfirmasi PO.</span></div>
+    <div class="note"><span class="n">4</span><span>Kode pos asal dibutuhkan Biteship (<span class="mono">BITESHIP_ORIGIN_POSTCODE</span> kini global; per toko belum ada).</span></div>
+    <div class="note"><span class="n">5</span><span>Data tenant: semua tulis lewat <span class="mono">CurrentStore</span> (RLS <span class="mono">store_id</span>).</span></div>
+  </div>
+</div>
+
+
+<script src="../mock.js"></script></body>
+</html>

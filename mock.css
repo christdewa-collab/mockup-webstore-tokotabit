@@ -1,0 +1,6 @@
+body{padding-top:64px!important}
+#tb{position:fixed;top:0;left:0;right:0;z-index:99;background:#14294a;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;font:600 13px system-ui,sans-serif}
+#tb a{color:#fff;text-decoration:none;background:#ffffff22;padding:6px 12px;border-radius:8px;margin-left:6px}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#14294a;color:#fff;padding:10px 16px;border-radius:10px;font:600 13px system-ui,sans-serif;opacity:0;transition:opacity .2s;pointer-events:none;z-index:99}
+#toast.on{opacity:1}
+button:not([disabled]),a[href="#"],.opt:not(.off),.rd,.seg span,.sw{cursor:pointer}

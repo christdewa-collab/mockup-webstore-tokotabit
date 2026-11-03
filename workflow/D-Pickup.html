@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Order pickup</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#222a36}
+.win{background:#fff;border:1px solid #e7eaef;border-radius:14px;box-shadow:0 1px 3px rgba(20,41,74,.08);overflow:hidden;display:flex;flex-direction:column}
+.bar{background:#f1f3f6;border-bottom:1px solid #e7eaef;padding:9px 14px;font-size:12px;color:#556275;font-family:'JetBrains Mono',monospace}
+.body{padding:22px;display:flex;flex-direction:column;gap:14px}
+.h{font-size:14px;font-weight:800;color:#14294a}
+.sub{font-size:12px;color:#556275}
+.in{box-sizing:border-box;border:1px solid #cfd6e0;border-radius:8px;padding:11px 12px;font:inherit;font-size:16px;background:#fff;letter-spacing:.2em;width:180px}
+.btn{border:0;border-radius:8px;background:#1c64c4;color:#fff;font:inherit;font-size:14px;font-weight:700;padding:11px 18px}
+.btn[disabled]{background:#c9d3e2;color:#556275}
+.btn2{border:1px solid #cfd6e0;border-radius:8px;background:#fff;color:#14294a;font:inherit;font-size:13px;font-weight:600;padding:9px 14px}
+.pin{width:20px;height:20px;border-radius:999px;background:#c77a06;color:#fff;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle;margin-right:6px}
+.mono{font-family:'JetBrains Mono',monospace}
+.pill{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.wait{background:#fbf1dd;color:#8a5200}.info{background:#e8f0fb;color:#154e9c}
+.tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px}
+.perbaiki{background:#fbf1dd;color:#8a5200}.baru{background:#e8f0fb;color:#154e9c}.ada{background:#e7f4ec;color:#146c3b}
+.leg{display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:1.45;color:#33445f}
+.qr{width:120px;height:120px;border-radius:10px;border:1px solid #e7eaef;background:repeating-conic-gradient(#14294a 0 25%,#fff 0 50%) 0 0/20px 20px;flex-shrink:0}
+.row{display:flex;justify-content:space-between;font-size:13px}
+</style>
+<style>body{background:#e9ecf1;padding:24px;overflow:auto}body>div{margin:0 auto}</style>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div id="tb"><a href="../index.html">☰ Indeks</a><span>Alur 5 · Order pickup</span><span><a href="../workflow/C-Order.html">‹ Sebelumnya</a><a href="../workflow/E-Preorder.html">Berikutnya ›</a></span></div><div id="toast" role="status"></div>
+
+
+<div style="width:1560px;height:860px;box-sizing:border-box;background:#f5f6f8;padding:32px 40px;display:flex;flex-direction:column;gap:20px">
+  <div>
+    <div style="font-size:12px;font-weight:700;color:#1c64c4;letter-spacing:.06em">ALUR 5 · ORDERAN PICKUP (AMBIL DI TOKO)</div>
+    <h1 style="margin:4px 0 0;font-size:28px;font-weight:800;color:#14294a">Kode ambil &amp; serah terima</h1>
+    <p style="margin:6px 0 0;font-size:14px;color:#556275">Menutup temuan QA: kode ambil dan batas waktu belum ada, serah terima belum diverifikasi, dan seller tidak mendapat notifikasi order baru. Kode dan jam contoh.</p>
+  </div>
+
+  <div style="display:flex;gap:28px;flex-grow:1;min-height:0">
+    <div style="flex:1 1 0;display:flex;flex-direction:column;gap:14px;min-width:0">
+      <div class="win">
+        <div class="bar">teknikjaya.tehniq.id/account/orders/1043</div>
+        <div class="body">
+          <div style="display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:18px;font-weight:800;color:#14294a">Pesanan siap diambil</div><div class="sub">Order #1043 · Ambil di toko</div></div><span class="pill info">Siap diambil</span></div>
+          <div style="display:flex;gap:20px;align-items:center;background:#f2f6fc;border-radius:12px;padding:18px">
+            <div class="qr" role="img" aria-label="QR kode ambil"></div>
+            <div>
+              <div class="sub"><span class="pin">1</span>Kode ambil</div>
+              <div class="mono" style="font-size:34px;font-weight:700;letter-spacing:.18em;color:#14294a">48 27 91</div>
+              <div class="sub" style="margin-top:4px">Tunjukkan kode atau QR ini ke penjual saat mengambil.</div>
+            </div>
+          </div>
+          <div style="background:#fbf1dd;border-radius:10px;padding:11px 14px;font-size:13px;color:#8a5200;font-weight:600"><span class="pin">2</span>Ambil sebelum 6 Nov 2026, 17:00. Lewat batas, pesanan dibatalkan dan dana dikembalikan.</div>
+          <div style="display:flex;flex-direction:column;gap:6px;border-top:1px solid #e7eaef;padding-top:12px">
+            <div class="row"><span>Alamat toko</span><span style="text-align:right">Jl. Rungkut Industri III No. 12, Surabaya</span></div>
+            <div class="row"><span>Jam buka</span><span>Sen–Sab 09.00–17.00</span></div>
+            <div class="row"><span>Ongkir</span><b style="color:#146c3b">Gratis</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="leg">
+        <div><span class="pin">1</span><b>Kode ambil 6 digit + QR</b> dibuat saat status Siap diambil; dikirim lewat WA/email dan tampil di Pesanan Saya. <span class="tag perbaiki">Perbaiki</span></div>
+        <div><span class="pin">2</span><b>Batas ambil 3 hari</b> (usulan, disepakati tim). Pengingat otomatis dikirim sehari sebelum batas. <span class="tag baru">Baru</span></div>
+        <div>Alamat, jam buka, dan Ongkir Gratis. <span class="tag ada">Sudah ada</span></div>
+      </div>
+    </div>
+
+    <div style="flex:1 1 0;display:flex;flex-direction:column;gap:14px;min-width:0">
+      <div class="win">
+        <div class="bar">seller.tehniq.id/dashboard/orders/1043</div>
+        <div class="body">
+          <div style="display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:18px;font-weight:800;color:#14294a">Order #1043</div><div class="sub">Ambil di toko · Rizal Pratama · 0812 3456 7890</div></div><span class="pill info">Siap diambil</span></div>
+          <div style="border:1px solid #e7eaef;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px">
+            <div class="h"><span class="pin">3</span>Serah terima barang</div>
+            <div class="sub">Minta pembeli menunjukkan kode ambil, lalu masukkan atau pindai kodenya.</div>
+            <div style="display:flex;gap:10px;align-items:center"><label for="kd" style="position:absolute;left:-9999px">Kode ambil</label><input id="kd" class="in mono" value="482791" readonly><button class="btn2" type="button">Pindai QR</button></div>
+            <div style="font-size:12px;color:#146c3b;font-weight:700">Kode cocok dengan order #1043</div>
+            <button class="btn" type="button" style="align-self:flex-start">Sudah diambil</button>
+          </div>
+          <div class="row" style="border-top:1px solid #e7eaef;padding-top:12px"><span>Pendapatan seller</span><span class="mono"><b>Rp 285.000</b> <span class="sub">(tanpa fee platform)</span></span></div>
+        </div>
+      </div>
+      <div class="win">
+        <div class="bar">Notifikasi ke seller · WhatsApp / email</div>
+        <div class="body" style="gap:6px"><div class="h"><span class="pin">4</span>Order baru #1043 sudah dibayar</div><div class="sub">Ambil di toko · Rp 285.000. Buka Seller Center untuk menyiapkan barang.</div></div>
+      </div>
+      <div class="leg">
+        <div><span class="pin">3</span><b>Verifikasi kode</b> wajib sebelum tombol “Sudah diambil” aktif. <span class="tag perbaiki">Perbaiki</span></div>
+        <div><span class="pin">4</span>Notifikasi order baru ke seller saat Dibayar. <span class="tag perbaiki">Perbaiki</span></div>
+        <div>Fee platform 0 untuk pickup dipakai sama di Laporan seller dan GMV admin; minta IT konfirmasi. <span class="tag perbaiki">Perbaiki</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../mock.js"></script></body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Refund</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#222a36}
+.win{background:#fff;border:1px solid #e7eaef;border-radius:14px;box-shadow:0 1px 3px rgba(20,41,74,.08);overflow:hidden;display:flex;flex-direction:column}
+.bar{background:#f1f3f6;border-bottom:1px solid #e7eaef;padding:8px 14px;font-size:12px;color:#556275;font-family:'JetBrains Mono',monospace}
+.body{padding:18px;display:flex;flex-direction:column;gap:11px}
+.h{font-size:14px;font-weight:800;color:#14294a}
+.sub{font-size:12px;color:#556275}
+.lbl{font-size:13px;font-weight:600;color:#14294a;display:block;margin-bottom:5px}
+.in{width:100%;box-sizing:border-box;border:1px solid #cfd6e0;border-radius:8px;padding:9px 12px;font:inherit;font-size:14px;background:#fff}
+.btn{border:0;border-radius:8px;background:#1c64c4;color:#fff;font:inherit;font-size:14px;font-weight:700;padding:11px 18px}
+.btn2{border:1px solid #cfd6e0;border-radius:8px;background:#fff;color:#14294a;font:inherit;font-size:13px;font-weight:600;padding:9px 14px}
+.pin{width:20px;height:20px;border-radius:999px;background:#c77a06;color:#fff;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle;margin-right:6px}
+.mono{font-family:'JetBrains Mono',monospace}
+.pill{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.wait{background:#fbf1dd;color:#8a5200}.info{background:#e8f0fb;color:#154e9c}.bad{background:#fbebec;color:#a4302b}
+.tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px}
+.perbaiki{background:#fbf1dd;color:#8a5200}.baru{background:#e8f0fb;color:#154e9c}.ada{background:#e7f4ec;color:#146c3b}
+.leg{display:flex;flex-direction:column;gap:7px;font-size:13px;line-height:1.45;color:#33445f}
+.ph{background:#e8ebf0;border-radius:8px;width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#556275}
+.add{border:1.5px dashed #cfd6e0;border-radius:8px;width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:22px;color:#556275}
+.rd{display:flex;gap:10px;align-items:center;font-size:13px;padding:9px 12px;border:1px solid #e7eaef;border-radius:8px}
+.rd.sel{border-color:#1c64c4;background:#f2f6fc}
+.rad{width:14px;height:14px;border-radius:999px;border:2px solid #cfd6e0;flex-shrink:0}
+.sel .rad{border-color:#1c64c4;background:radial-gradient(#1c64c4 45%,#fff 50%)}
+.chat{background:#f5f6f8;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.45;max-width:80%}
+.col{flex:1 1 0;min-width:0;border:1px solid #e7eaef;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px}
+</style>
+<style>body{background:#e9ecf1;padding:24px;overflow:auto}body>div{margin:0 auto}</style>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div id="tb"><a href="../index.html">☰ Indeks</a><span>Alur 7 · Refund</span><span><a href="../workflow/E-Preorder.html">‹ Sebelumnya</a><a href="../workflow/G-Registrasi.html">Berikutnya ›</a></span></div><div id="toast" role="status"></div>
+
+
+<div style="width:1560px;height:900px;box-sizing:border-box;background:#f5f6f8;padding:32px 40px;display:flex;flex-direction:column;gap:18px">
+  <div>
+    <div style="font-size:12px;font-weight:700;color:#1c64c4;letter-spacing:.06em">ALUR 7 · REFUND (RETUR &amp; PEMBATALAN)</div>
+    <h1 style="margin:4px 0 0;font-size:28px;font-weight:800;color:#14294a">Ajukan retur, respon seller, mediasi admin</h1>
+    <p style="margin:6px 0 0;font-size:14px;color:#556275">Menutup temuan QA: retur bisa diajukan saat order masih dikirim, belum ada upload bukti, dan admin belum punya modul retur/sengketa. Data order dan nama contoh.</p>
+  </div>
+
+  <div style="display:flex;gap:28px;flex-grow:1;min-height:0">
+    <div style="width:640px;flex-shrink:0;display:flex;flex-direction:column;gap:12px">
+      <div class="win">
+        <div class="bar">teknikjaya.tehniq.id/account/orders/1040/return</div>
+        <div class="body">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:17px;font-weight:800;color:#14294a">Ajukan pengembalian</span><span class="pill info">Order #1040 · Sampai 2 hari lalu</span></div>
+          <div class="sub"><span class="pin">1</span>Batas pengajuan retur: 3 hari setelah barang sampai (sisa 1 hari)</div>
+          <div><span class="lbl">Alasan</span>
+            <div style="display:flex;flex-direction:column;gap:6px"><div class="rd sel"><span class="rad"></span>Barang rusak / cacat</div><div class="rd"><span class="rad"></span>Tidak sesuai deskripsi</div><div class="rd"><span class="rad"></span>Salah kirim</div><div class="rd"><span class="rad"></span>Berubah pikiran <span class="sub">(bila toko mengizinkan)</span></div></div>
+          </div>
+          <div><label class="lbl" for="ket">Penjelasan</label><textarea id="ket" class="in" rows="2">Bagian pegangan retak saat dibuka.</textarea></div>
+          <div><span class="lbl"><span class="pin">2</span>Bukti foto / video <span style="font-weight:400;color:#556275">(minimal 1)</span></span><div style="display:flex;gap:8px"><div class="ph">foto 1</div><div class="ph">foto 2</div><div class="ph">video</div><div class="add" aria-hidden="true">+</div></div></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span class="sub">Dana order ditahan selama proses retur</span><button class="btn" type="button">Kirim pengajuan</button></div>
+        </div>
+      </div>
+      <div class="win">
+        <div class="bar">seller.tehniq.id/dashboard/orders/1040 · Request retur</div>
+        <div class="body">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span class="h"><span class="pin">3</span>Respon retur</span><span class="pill wait">Batas respon 2 hari</span></div>
+          <div class="sub">Barang rusak / cacat · 3 bukti dari pembeli</div>
+          <div style="display:flex;gap:8px"><button class="btn" type="button" style="padding:9px 16px">Setujui retur</button><button class="btn2" type="button" style="border-color:#d6453f;color:#b3322d">Tolak + alasan</button></div>
+          <div class="sub">Tanpa respon sampai batas, kasus otomatis naik ke admin.</div>
+        </div>
+      </div>
+      <div class="leg">
+        <div><span class="pin">1</span>Tombol retur hanya aktif setelah status Sampai dan dalam batas retur toko. <span class="tag perbaiki">Perbaiki</span></div>
+        <div><span class="pin">2</span>Upload bukti foto/video wajib; alasan sesuai kebijakan toko. <span class="tag perbaiki">Perbaiki</span></div>
+        <div><span class="pin">3</span>Seller setuju atau tolak; saldo order ditahan sejak pengajuan dan tidak bisa ditarik. <span class="tag baru">Baru</span></div>
+      </div>
+    </div>
+
+    <div style="flex-grow:1;display:flex;flex-direction:column;gap:12px;min-width:0">
+      <div class="win" style="flex-grow:1">
+        <div class="bar">admin.tehniq.id/webmaster · Pesanan › Sengketa retur › #1040</div>
+        <div class="body" style="flex-grow:1">
+          <div style="display:flex;gap:8px"><span class="pill wait">Perlu mediasi · 2</span><span class="pill" style="background:#f1f3f6;color:#33445f">Selesai · 9</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:17px;font-weight:800;color:#14294a"><span class="pin">4</span>Sengketa retur order #1040</div><div class="sub">Teknik Jaya · Rizal Pratama · Rp 285.000</div></div><span class="pill bad">Seller menolak</span></div>
+          <div style="display:flex;gap:12px">
+            <div class="col"><div class="h">Bukti pembeli</div><div style="display:flex;gap:6px"><div class="ph">foto 1</div><div class="ph">foto 2</div><div class="ph">video</div></div><div class="sub">“Bagian pegangan retak saat dibuka.”</div></div>
+            <div class="col"><div class="h">Tanggapan seller</div><div style="display:flex;gap:6px"><div class="ph">foto</div></div><div class="sub">“Kerusakan terjadi setelah barang diterima.”</div></div>
+          </div>
+          <div class="col" style="flex:0 0 auto"><div class="h">Riwayat chat</div>
+            <div class="chat">Pembeli: Barangnya retak, mohon dikembalikan.</div>
+            <div class="chat" style="align-self:flex-end;background:#e8f0fb">Seller: Dari foto kami lihat bukan cacat produksi.</div>
+          </div>
+          <div style="border-top:1px solid #e7eaef;padding-top:12px;display:flex;flex-direction:column;gap:8px">
+            <div class="h"><span class="pin">5</span>Keputusan admin</div>
+            <div style="display:flex;gap:8px"><div class="rd sel" style="flex:1"><span class="rad"></span>Refund penuh</div><div class="rd" style="flex:1"><span class="rad"></span>Refund sebagian</div><div class="rd" style="flex:1"><span class="rad"></span>Tolak</div></div>
+            <label class="lbl" for="al" style="margin:0">Alasan keputusan (dikirim ke kedua pihak)</label><input id="al" class="in" placeholder="Wajib diisi">
+            <button class="btn" type="button" style="align-self:flex-end">Putuskan &amp; refund via Midtrans</button>
+          </div>
+        </div>
+      </div>
+      <div class="leg">
+        <div><span class="pin">4</span><b>Modul retur/sengketa di Webmaster</b>: antrean per status, bukti kedua pihak, dan riwayat chat dalam satu halaman. <span class="tag baru">Baru</span></div>
+        <div><span class="pin">5</span>Keputusan refund penuh/sebagian/tolak wajib alasan. Refund ke metode bayar asal, saldo seller dikurangi, fee Tabyte dibebaskan; Laporan Return dan Pembatalan ikut bertambah. <span class="tag perbaiki">Perbaiki</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../mock.js"></script></body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Checklist go-live</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#222a36}
+.card{background:#fff;border:1px solid #e7eaef;border-radius:12px;box-shadow:0 1px 2px rgba(20,41,74,.06)}
+.btn{border:0;border-radius:8px;background:#1c64c4;color:#fff;font:inherit;font-size:14px;font-weight:700;padding:11px 20px}
+.btn[disabled]{background:#c9d3e2;color:#556275}
+.btn2{border:1px solid #cfd6e0;border-radius:8px;background:#fff;color:#154e9c;font:inherit;font-size:13px;font-weight:700;padding:8px 14px;text-decoration:none}
+.n{width:22px;height:22px;border-radius:999px;background:#c77a06;color:#fff;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.note{display:flex;gap:10px;font-size:13px;line-height:1.5;color:#33445f}
+.mono{font-family:'JetBrains Mono',monospace;font-size:12px;background:#f1f3f6;padding:1px 5px;border-radius:4px}
+.item{display:flex;align-items:center;gap:14px;padding:14px 4px;border-bottom:1px solid #f1f3f6}
+.ic{width:28px;height:28px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0}
+.d{background:#18874a;color:#fff}.p{background:#fff;border:2px solid #c77a06;color:#c77a06}
+.tt{font-size:14px;font-weight:700;color:#14294a}.ss{font-size:12px;color:#556275;margin-top:2px}
+.who{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:#f1f3f6;color:#33445f;flex-shrink:0}
+.prop{font-size:11px;font-weight:700;color:#8a5200;background:#fbf1dd;padding:2px 6px;border-radius:4px;margin-left:6px}
+</style>
+<style>body{background:#e9ecf1;padding:24px;overflow:auto}body>div{margin:0 auto}</style>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div id="tb"><a href="../index.html">☰ Indeks</a><span>6 · Checklist go-live</span><span><a href="../onboarding/S5-SubId.html">‹ Sebelumnya</a><a href="../onboarding/S7-Aktif.html">Berikutnya ›</a></span></div><div id="toast" role="status"></div>
+
+
+<div style="width:1040px;height:740px;box-sizing:border-box;background:#f5f6f8;padding:28px;display:flex;gap:24px">
+  <div style="flex-grow:1;display:flex;flex-direction:column;gap:16px;min-width:0">
+    <div>
+      <div style="font-size:12px;font-weight:700;color:#1c64c4;letter-spacing:.06em">LANGKAH 8 · PEMILIK TOKO + SISTEM</div>
+      <h2 style="margin:4px 0 0;font-size:22px;font-weight:800;color:#14294a">Checklist go-live</h2>
+    </div>
+    <div class="card" style="padding:22px;display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+        <div><div style="font-size:16px;font-weight:800;color:#14294a">Hampir siap dibuka</div><div style="font-size:13px;color:#556275">Selesaikan semua item agar toko Anda bisa menerima pesanan.</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;color:#1c64c4">4/6</div>
+      </div>
+      <div style="height:8px;border-radius:999px;background:#e8f0fb;margin:8px 0 10px"><div style="width:66%;height:8px;border-radius:999px;background:#1c64c4"></div></div>
+
+      <div class="item"><span class="ic d">✓</span><div style="flex-grow:1"><div class="tt">Kata sandi dibuat</div><div class="ss">Undangan diterima 3 Nov 2026</div></div><span class="who">Penjual</span></div>
+      <div class="item"><span class="ic d">✓</span><div style="flex-grow:1"><div class="tt">Profil toko lengkap</div><div class="ss">Logo, deskripsi, alamat asal kirim</div></div><span class="who">Penjual</span></div>
+      <div class="item"><span class="ic d">✓</span><div style="flex-grow:1"><div class="tt">Verifikasi usaha disetujui</div><div class="ss">Disetujui admin Tabyte</div></div><span class="who">Admin</span></div>
+      <div class="item"><span class="ic d">✓</span><div style="flex-grow:1"><div class="tt">Pembayaran Midtrans siap</div><div class="ss">Sub ID sudah terdaftar</div></div><span class="who">Admin</span></div>
+      <div class="item"><span class="ic p">!</span><div style="flex-grow:1"><div class="tt">Rekening penarikan terverifikasi<span class="prop">usulan</span></div><div class="ss">Belum ada rekening yang disetujui admin</div></div><a class="btn2" href="#">Tambah rekening</a></div>
+      <div class="item" style="border-bottom:0"><span class="ic p">!</span><div style="flex-grow:1"><div class="tt">Minimal 1 produk aktif<span class="prop">usulan</span></div><div class="ss">Belum ada produk berstatus aktif</div></div><a class="btn2" href="#">Tambah produk</a></div>
+    </div>
+    <div style="display:flex;justify-content:flex-end;align-items:center;gap:14px">
+      <span style="font-size:13px;color:#556275">Selesaikan 2 item lagi untuk membuka toko</span>
+      <button class="btn" type="button" disabled>Aktifkan toko</button>
+    </div>
+  </div>
+
+  <div style="width:270px;flex-shrink:0;display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid #e7eaef;border-radius:12px;padding:18px;align-self:stretch;box-sizing:border-box">
+    <div style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#14294a">CATATAN DEVELOPER</div>
+    <div class="note"><span class="n">1</span><span><b>Keputusan 8.</b> Checklist dihitung server dari data, bukan flag manual: <span class="mono">GoLiveChecklist::for($store)</span> <span class="prop" style="margin:0">baru</span> mengembalikan daftar item + status.</span></div>
+    <div class="note"><span class="n">2</span><span>Isi item <span class="prop" style="margin:0">usulan</span>: 4 item awal diambil dari alur; rekening (<span class="mono">StoreBankAccount</span> APPROVED) dan produk aktif diusulkan karena penarikan dan katalog butuh itu. PO mohon konfirmasi daftar final.</span></div>
+    <div class="note"><span class="n">3</span><span>Item milik admin ditandai “Admin” agar penjual tahu bukan tugasnya.</span></div>
+    <div class="note"><span class="n">4</span><span><b>Perlu keputusan PO:</b> toko aktif otomatis saat semua terpenuhi, atau penjual menekan “Aktifkan toko”. Mockup menampilkan tombol manual.</span></div>
+    <div class="note"><span class="n">5</span><span>Aktif → host <span class="mono">{slug}.tehniq.id</span> terbuka; sebelum itu 404 untuk publik, preview draf lewat <span class="mono">signedUrl()</span>.</span></div>
+  </div>
+</div>
+
+
+<script src="../mock.js"></script></body>
+</html>

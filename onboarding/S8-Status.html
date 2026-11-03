@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Status dan catatan developer</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#222a36}
+.card{background:#fff;border:1px solid #e7eaef;border-radius:12px;box-shadow:0 1px 2px rgba(20,41,74,.06)}
+.mono{font-family:'JetBrains Mono',monospace;font-size:12px;background:#f1f3f6;padding:1px 5px;border-radius:4px}
+.pill{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.ok{background:#e7f4ec;color:#146c3b}.wait{background:#fbf1dd;color:#8a5200}.bad{background:#fbebec;color:#a4302b}.gray{background:#f1f3f6;color:#33445f}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{text-align:left;font-size:12px;color:#556275;font-weight:700;padding:8px 10px;border-bottom:1px solid #e7eaef}
+td{padding:11px 10px;border-bottom:1px solid #f1f3f6;vertical-align:top;line-height:1.45}
+li{font-size:13px;line-height:1.55;color:#33445f;margin-bottom:8px}
+</style>
+<style>body{background:#e9ecf1;padding:24px;overflow:auto}body>div{margin:0 auto}</style>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div id="tb"><a href="../index.html">☰ Indeks</a><span>8 · Status & catatan developer</span><span><a href="../onboarding/S7-Aktif.html">‹ Sebelumnya</a><a href="../workflow/Main.html">Berikutnya ›</a></span></div><div id="toast" role="status"></div>
+
+
+<div style="width:1040px;height:740px;box-sizing:border-box;background:#f5f6f8;padding:28px;display:flex;flex-direction:column;gap:16px">
+  <div>
+    <div style="font-size:12px;font-weight:700;color:#1c64c4;letter-spacing:.06em">RINGKASAN UNTUK TIM DEVELOPER</div>
+    <h2 style="margin:4px 0 0;font-size:22px;font-weight:800;color:#14294a">Status, kondisi tolak &amp; hal yang perlu diputuskan</h2>
+  </div>
+
+  <div class="card" style="padding:8px 14px 12px">
+    <table>
+      <thead><tr><th style="width:150px">Status verifikasi usaha</th><th>Arti</th><th style="width:270px">Penjual melihat</th><th style="width:250px">Admin melihat</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill gray">Belum dikirim</span></td><td>Profil usaha belum ada atau masih draf; dokumen wajib belum lengkap.</td><td>Form + tombol Kirim nonaktif sampai lengkap</td><td>Tidak ada di antrean</td></tr>
+        <tr><td><span class="pill wait">PENDING</span></td><td>Sudah dikirim, menunggu review.</td><td>Banner “Sedang ditinjau”, form dikunci</td><td>Tab Menunggu, tombol Setujui / Tolak</td></tr>
+        <tr><td><span class="pill bad">REJECTED</span></td><td>Ditolak admin dengan catatan.</td><td>Banner merah berisi <span class="mono">review_note</span>, form terbuka, bisa kirim ulang</td><td>Tab Ditolak; bisa disetujui ulang</td></tr>
+        <tr><td><span class="pill ok">APPROVED</span></td><td>Disetujui; <span class="mono">verified_at</span> terisi.</td><td>Centang hijau; langkah berikutnya checklist go-live</td><td>Tab Disetujui; kolom Terverifikasi di tabel Toko</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="display:flex;gap:16px;flex-grow:1;min-height:0">
+    <div class="card" style="flex:1 1 0;padding:18px;min-width:0">
+      <div style="font-size:14px;font-weight:800;color:#14294a;margin-bottom:10px">Tampilan saat ditolak (penjual)</div>
+      <div style="background:#fbebec;border-radius:10px;padding:14px">
+        <div style="font-size:14px;font-weight:700;color:#a4302b">Verifikasi ditolak</div>
+        <div style="font-size:13px;color:#33445f;margin-top:4px;line-height:1.5">“NPWP tidak terbaca, unggah ulang dengan foto lebih jelas.”</div>
+        <div style="font-size:12px;color:#556275;margin-top:6px">Ditinjau admin Tabyte · 3 Nov 2026</div>
+        <a href="#" style="display:inline-block;margin-top:10px;background:#1c64c4;color:#fff;font-weight:700;font-size:13px;padding:9px 14px;border-radius:8px;text-decoration:none">Perbaiki &amp; kirim ulang</a>
+      </div>
+      <div style="font-size:12px;color:#556275;margin-top:12px;line-height:1.5">Tombol membawa penjual kembali ke langkah 3 (layar “Informasi usaha &amp; dokumen”) dengan data yang sudah terisi.</div>
+    </div>
+
+    <div class="card" style="flex:1 1 0;padding:18px;min-width:0">
+      <div style="font-size:14px;font-weight:800;color:#14294a;margin-bottom:10px">Perlu diputuskan PO sebelum dibangun</div>
+      <ol style="margin:0;padding-left:18px">
+        <li>Dokumen wajib per jenis usaha (Perorangan vs Perusahaan).</li>
+        <li>Kolom profil toko tambahan: kontak, alamat asal pengiriman per toko.</li>
+        <li>Isi final checklist go-live; apakah rekening penarikan dan produk aktif ikut.</li>
+        <li>Toko aktif otomatis atau lewat tombol “Aktifkan toko”.</li>
+        <li>Notifikasi hasil review ke penjual (email Resend).</li>
+        <li>Bolehkah Sub ID diisi sebelum verifikasi disetujui.</li>
+      </ol>
+    </div>
+
+    <div class="card" style="flex:1 1 0;padding:18px;min-width:0">
+      <div style="font-size:14px;font-weight:800;color:#14294a;margin-bottom:10px">Sudah ada di kode</div>
+      <ul style="margin:0;padding-left:18px">
+        <li><span class="mono">StoreOnboarding</span>: toko + owner + undangan.</li>
+        <li><span class="mono">accept-invite</span>: buat kata sandi.</li>
+        <li><span class="mono">StoreBusinessProfile</span> + dokumen + <span class="mono">BusinessVerification</span>.</li>
+        <li>Resource Webmaster Verifikasi usaha.</li>
+        <li><span class="mono">stores.midtrans_sub_id</span> di Ubah Toko.</li>
+      </ul>
+      <div style="font-size:13px;font-weight:800;color:#14294a;margin:12px 0 6px">Perlu dibuat baru</div>
+      <ul style="margin:0;padding-left:18px">
+        <li>Stepper &amp; form profil toko.</li>
+        <li>Form usaha + unggah dokumen sisi penjual.</li>
+        <li>Checklist go-live &amp; aktivasi.</li>
+        <li>Badge di storefront.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script src="../mock.js"></script></body>
+</html>

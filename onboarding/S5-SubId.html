@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Midtrans Sub ID</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#222a36}
+.card{background:#fff;border:1px solid #e7eaef;border-radius:12px;box-shadow:0 1px 2px rgba(20,41,74,.06)}
+.lbl{font-size:13px;font-weight:600;color:#14294a;display:block;margin-bottom:6px}
+.in{width:100%;box-sizing:border-box;border:1px solid #cfd6e0;border-radius:8px;padding:10px 12px;font:inherit;font-size:14px;background:#fff;color:#222a36}
+.in[readonly]{background:#f1f3f6;color:#556275}
+.btn{border:0;border-radius:8px;background:#1c64c4;color:#fff;font:inherit;font-size:14px;font-weight:700;padding:11px 20px}
+.btn2{border:1px solid #cfd6e0;border-radius:8px;background:#fff;color:#14294a;font:inherit;font-size:14px;font-weight:600;padding:11px 20px}
+.hint{font-size:12px;color:#556275;margin-top:6px}
+.n{width:22px;height:22px;border-radius:999px;background:#c77a06;color:#fff;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.note{display:flex;gap:10px;font-size:13px;line-height:1.5;color:#33445f}
+.mono{font-family:'JetBrains Mono',monospace;font-size:12px;background:#f1f3f6;padding:1px 5px;border-radius:4px}
+.pill{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px}
+.ok{background:#e7f4ec;color:#146c3b}.wait{background:#fbf1dd;color:#8a5200}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f1f3f6;font-size:14px}
+</style>
+<style>body{background:#e9ecf1;padding:24px;overflow:auto}body>div{margin:0 auto}</style>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div id="tb"><a href="../index.html">☰ Indeks</a><span>5 · Midtrans Sub ID (Webmaster)</span><span><a href="../onboarding/S4-Review.html">‹ Sebelumnya</a><a href="../onboarding/S6-GoLive.html">Berikutnya ›</a></span></div><div id="toast" role="status"></div>
+
+
+<div style="width:1040px;height:740px;box-sizing:border-box;background:#f5f6f8;padding:28px;display:flex;gap:24px">
+  <div style="flex-grow:1;display:flex;flex-direction:column;gap:16px;min-width:0">
+    <div>
+      <div style="font-size:12px;font-weight:700;color:#146c3b;letter-spacing:.06em">LANGKAH 7 · ADMIN TABYTE (WEBMASTER)</div>
+      <h2 style="margin:4px 0 0;font-size:22px;font-weight:800;color:#14294a">Isi Midtrans Sub ID</h2>
+    </div>
+    <div style="font-size:13px;color:#556275">Webmaster › Toko › Teknik Jaya › <b style="color:#14294a">Ubah</b></div>
+
+    <div class="card" style="padding:22px;display:flex;flex-direction:column;gap:16px">
+      <div style="background:#e7f4ec;border-radius:10px;padding:12px 14px;font-size:13px;color:#146c3b;font-weight:600">Verifikasi usaha disetujui pada 3 Nov 2026. Lanjutkan dengan mendaftarkan sub-merchant di Midtrans lalu tempel Sub ID di bawah.</div>
+      <div class="g2">
+        <div><label class="lbl" for="a">Nama toko</label><input id="a" class="in" readonly value="Teknik Jaya"></div>
+        <div><label class="lbl" for="b">Status toko</label><select id="b" class="in"><option>Belum aktif</option><option>Aktif</option><option>Ditangguhkan</option></select></div>
+      </div>
+      <div style="max-width:440px">
+        <label class="lbl" for="c">Midtrans Sub ID</label>
+        <input id="c" class="in" style="font-family:'JetBrains Mono',monospace" value="G123456789">
+        <div class="hint">1 toko = 1 Sub ID dan harus unik. Boleh dikosongkan sampai split payment aktif; wajib untuk go-live.</div>
+      </div>
+      <div style="display:flex;gap:10px"><button class="btn" type="button">Simpan</button><button class="btn2" type="button">Batal</button></div>
+    </div>
+
+    <div class="card" style="padding:6px 22px 10px">
+      <div style="font-size:13px;font-weight:800;color:#14294a;padding:12px 0 4px">Ringkasan kesiapan toko</div>
+      <div class="row"><span>Verifikasi usaha</span><span class="pill ok">Disetujui</span></div>
+      <div class="row"><span>Midtrans Sub ID</span><span class="pill ok">Terisi</span></div>
+      <div class="row" style="border-bottom:0"><span>Checklist go-live penjual</span><span class="pill wait">4 dari 6 terpenuhi</span></div>
+    </div>
+  </div>
+
+  <div style="width:270px;flex-shrink:0;display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid #e7eaef;border-radius:12px;padding:18px;align-self:stretch;box-sizing:border-box">
+    <div style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#14294a">CATATAN DEVELOPER</div>
+    <div class="note"><span class="n">1</span><span>Kolom <span class="mono">stores.midtrans_sub_id</span> varchar(64), nullable, unique (migrasi <span class="mono">add_store_onboarding</span>). Sudah ada di halaman Ubah Toko.</span></div>
+    <div class="note"><span class="n">2</span><span>Validasi unik: pesan galat jelas bila Sub ID sudah dipakai toko lain.</span></div>
+    <div class="note"><span class="n">3</span><span>Urutan: Sub ID baru bisa diisi setelah verifikasi APPROVED <span class="mono">usulan</span>.</span></div>
+    <div class="note"><span class="n">4</span><span>Ringkasan kesiapan (kartu bawah) <span class="mono">usulan</span>: pakai hasil checklist go-live (layar 6) agar admin tahu item yang masih kurang.</span></div>
+    <div class="note"><span class="n">5</span><span>Toko tidak pernah dihapus dari sini; hanya <i>suspend</i>. Toko ditangguhkan → host toko 404.</span></div>
+  </div>
+</div>
+
+
+<script src="../mock.js"></script></body>
+</html>
