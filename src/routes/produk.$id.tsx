@@ -4,6 +4,7 @@ import { Minus, Plus, Star, Store, Truck, ChevronRight, ShoppingCart, ShieldChec
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/cart";
+import { usePrototype } from "@/lib/prototype";
 import { PRODUCTS, STORE, discount, getProduct, rp, soldLabel } from "@/lib/store-data";
 import { ProductCard, ProductTile } from "@/components/store/parts";
 
@@ -20,10 +21,13 @@ export const Route = createFileRoute("/produk/$id")({
 
 function Detail() {
   const p = Route.useLoaderData();
+  const { catalog } = usePrototype();
   const { add } = useCart();
   const nav = useNavigate();
   const [variant, setVariant] = useState<string>(p.variants[0] ?? "");
   const [qty, setQty] = useState(1);
+  const live = catalog.find(c => c.id === p.id)?.status === "Live";
+  if (!live) return <main className="p-10 text-center"><p className="mb-4 font-display text-2xl">Produk ini sedang tidak tersedia</p><Link to="/" className="font-bold text-primary">Kembali belanja</Link></main>;
   const addCart = () => { add(p.id, variant, qty); toast.success("Masuk keranjang! 🛒"); };
   return (
     <main className="mx-auto max-w-7xl space-y-7 px-4 pb-24 pt-5 sm:px-6 lg:px-8">

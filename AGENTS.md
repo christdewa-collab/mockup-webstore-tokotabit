@@ -38,3 +38,4 @@ use the editor.
 - Keep seller and Webmaster views under separate Outlet layouts and shared portal controls, so segment navigation remains distinct from buyer pages.
 - Use a root-scoped in-memory prototype provider for sample seller, review, and onboarding interactions; never persist or imply real authentication or payments in this mock prototype.
 - Leave shipping and final cart totals unquoted until destination, parcel weight, and courier are available, so the presentation does not invent a shipping policy.
+- Keep Tabyte workflow rules (statuses, transitions, fees, limits) as pure functions in src/lib/workflow.ts and call them from portal UI, so business logic stays testable and separate from presentation.

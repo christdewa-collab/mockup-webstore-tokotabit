@@ -7,8 +7,8 @@ import { usePrototype } from "@/lib/prototype";
 
 const icons = [ChartNoAxesCombined, Package, ShoppingBag, Store, FileCheck, Wallet, Scale, ScrollText];
 export function Status({ children }: { children: string }) {
-  const good = ["Aktif", "Live", "Selesai", "Disetujui", "Terverifikasi"].includes(children);
-  const bad = ["Perlu perbaikan", "Draft"].includes(children);
+  const good = ["Aktif", "Live", "Selesai", "Disetujui", "Terverifikasi", "Dibayar", "Direfund", "Sudah diambil"].includes(children);
+  const bad = ["Perlu revisi", "Draft", "Ditolak", "Dibatalkan", "Ditangguhkan", "Sengketa", "Pengembalian"].includes(children);
   return <span className={`inline-flex whitespace-nowrap items-center gap-1.5 rounded px-2 py-1 text-[10px] font-semibold ${good ? "bg-mint/35 text-success" : bad ? "bg-sale-soft text-sale" : "bg-sunny/30 text-sunny-foreground"}`}><span className="h-1 w-1 rounded-full bg-current" />{children}</span>;
 }
 export function PageTitle({ eyebrow, title, children }: { eyebrow: string; title: string; children?: ReactNode }) {

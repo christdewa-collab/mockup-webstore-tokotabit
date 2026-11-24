@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Minus, Plus, Trash2, ShoppingCart, ArrowRight, ChevronLeft } from "lucide-react";
-import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/cart";
 import { rp } from "@/lib/store-data";
@@ -64,10 +63,11 @@ function Cart() {
       <aside className="h-fit space-y-4 border-t py-5 lg:sticky lg:top-44 lg:border-l lg:border-t-0 lg:py-0 lg:pl-7">
         <h2 className="font-display text-xl font-semibold">Ringkasan Belanja</h2>
         <div className="flex justify-between text-sm"><span>Subtotal</span><span className="font-bold">{rp(total)}</span></div>
-        <div className="flex justify-between gap-3 text-sm"><span>Ongkir</span><span className="text-right text-muted-foreground">{quote.shipping === null ? "Belum dihitung" : rp(quote.shipping)}</span></div>
+        <div className="flex justify-between gap-3 text-sm"><span>Biaya layanan</span><span>{rp(quote.serviceFee)}</span></div>
+        <div className="flex justify-between gap-3 text-sm"><span>Ongkir</span><span className="text-right text-muted-foreground">{quote.shipping === null ? "Dihitung saat checkout" : rp(quote.shipping)}</span></div>
         <p className="text-xs leading-5 text-muted-foreground">Ongkir mengikuti alamat, berat barang, dan kurir pilihan.</p>
         <div className="flex flex-wrap items-center justify-between gap-2 border-t pt-4"><span className="font-semibold">Total barang</span><span className="font-display text-2xl font-bold text-sale">{rp(quote.itemsTotal)}</span></div>
-        <Button variant="coral" size="lg" className="h-12 w-full rounded-md text-sm font-semibold shadow-none" onClick={() => toast("Pembayaran belum aktif pada prototipe ini.")}>Checkout<ArrowRight className="h-4 w-4" /></Button>
+        <Button asChild variant="coral" size="lg" className="h-12 w-full rounded-md text-sm font-semibold shadow-none"><Link to="/checkout">Checkout<ArrowRight className="h-4 w-4" /></Link></Button>
       </aside>
     </main>
   );
