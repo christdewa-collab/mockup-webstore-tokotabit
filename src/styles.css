@@ -1,0 +1,165 @@
+@import "tailwindcss" source(none);
+@import "tw-animate-css";
+@source "../src";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Roboto", Arial, sans-serif;
+  --font-sans: "Roboto", Arial, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-ink: var(--brand-ink);
+  --color-sale: var(--sale);
+  --color-sale-soft: var(--sale-soft);
+  --color-success: var(--success);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-sunny: var(--sunny);
+  --color-sunny-foreground: var(--sunny-foreground);
+  --color-coral: var(--coral);
+  --color-mint: var(--mint);
+  --color-sky: var(--sky);
+  --color-grape: var(--grape);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-overlay: var(--overlay);
+  --color-ring-offset-background: var(--background);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.24 0.018 270);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--foreground);
+  /* Sampled from the supplied Tabyte logo, not from the reference marketplace. */
+  --primary: oklch(0.476 0.281 276.2);
+  --primary-foreground: oklch(1 0 0);
+  --brand-surface: oklch(0.919 0.039 250);
+  --brand-ink: oklch(0.218 0.101 282);
+  --overlay: color-mix(in oklab, var(--brand-ink) 65%, transparent);
+  --primary-soft: oklch(0.96 0.023 278);
+  --secondary: oklch(0.96 0.005 270);
+  --secondary-foreground: var(--foreground);
+  --sunny: oklch(0.88 0.17 93);
+  --sunny-foreground: oklch(0.28 0.04 78);
+  --coral: oklch(0.719 0.174 31);
+  --editorial-surface: oklch(0.975 0.004 270);
+  --mint: oklch(0.9 0.06 166);
+  --sky: oklch(0.91 0.05 240);
+  --grape: oklch(0.94 0.045 333);
+  --sale: oklch(0.58 0.19 31);
+  --sale-soft: oklch(0.96 0.026 23);
+  --success: oklch(0.48 0.13 159);
+  --muted: oklch(0.965 0.004 265);
+  --muted-foreground: oklch(0.53 0.018 265);
+  --accent: var(--primary-soft);
+  --accent-foreground: var(--primary);
+  --destructive: var(--sale);
+  --destructive-foreground: var(--primary-foreground);
+  --border: oklch(0.925 0.008 265);
+  --input: oklch(0.89 0.011 265);
+  --ring: var(--primary);
+  --shadow-chunky: 0 8px 24px -12px color-mix(in oklab, var(--brand-ink) 15%, transparent);
+  --shadow-pop: 0 2px 8px color-mix(in oklab, var(--brand-ink) 5%, transparent);
+  --shadow-float: 0 8px 25px -6px color-mix(in oklab, var(--brand-ink) 30%, transparent);
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.dark {
+  --brand-ink: oklch(0.94 0.003 270);
+  --background: oklch(0.19 0.012 270);
+  --foreground: oklch(0.94 0.003 270);
+  --card: oklch(0.23 0.012 270);
+  --popover: var(--card);
+  --primary-soft: oklch(0.29 0.06 278);
+  --secondary: oklch(0.27 0.01 270);
+  --muted: oklch(0.27 0.01 270);
+  --muted-foreground: oklch(0.73 0.012 270);
+  --border: oklch(0.34 0.012 270);
+  --input: var(--border);
+  --sale: oklch(0.72 0.17 25);
+  --sale-soft: oklch(0.27 0.04 25);
+  --editorial-surface: var(--muted);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    position: relative;
+    overflow-x: clip;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); }
+  button, a, input { -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; scroll-padding-top: 155px; overflow-x: clip; }
+}
+
+@utility bg-hero { background-color: var(--primary); }
+@utility bg-editorial { background-color: var(--editorial-surface); }
+@utility bg-cover-shade {
+  background: linear-gradient(100deg, color-mix(in oklab, var(--brand-ink) 82%, transparent) 0%, color-mix(in oklab, var(--brand-ink) 42%, transparent) 42%, transparent 72%);
+}
+@utility bg-flash { background-color: var(--primary-soft); }
+@utility shadow-chunky { box-shadow: var(--shadow-chunky); }
+@utility shadow-pop { box-shadow: var(--shadow-pop); }
+@utility shadow-float { box-shadow: var(--shadow-float); }
+@utility card-chunky {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+@layer base {
+  table { width: 100%; border-collapse: collapse; text-align: left; }
+  th { color: var(--muted-foreground); font-weight: 500; font-size: 0.75rem; }
+  td, th { padding: 1rem; border-bottom: 1px solid var(--border); }
+  td { font-size: 0.8125rem; }
+}
